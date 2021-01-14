@@ -1,0 +1,24 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build",
+    "build:app": "lerna run build --scope={@monorepo/app}",
+    "build:ui": "lerna run build --scope={@monorepo/ui}"
+  },
+  "volta": {
+    "node": "12.19.0",
+    "yarn": "1.22.10"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1"
+  }
+}
